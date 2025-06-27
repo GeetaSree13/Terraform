@@ -6,7 +6,7 @@ terraform {
 }
 
 resource "google_compute_instance" "vm_instance" {
-    name ="terraform-practices"
+    name ="terraform-practice"
     machine_type = "e2-medium"
     zone = "asia-southeast1-a"
 
@@ -31,7 +31,7 @@ resource "google_compute_firewall" "allow-http" {
     network = "default"
 
     allow {
-        protocol = "tcp"
+        protocol = "udp"
         ports    = ["80"]
     }
     direction     = "INGRESS"
